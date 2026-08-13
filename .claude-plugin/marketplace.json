@@ -1,0 +1,21 @@
+{
+  "name": "siteflight",
+  "owner": {
+    "name": "Yash Serai"
+  },
+  "metadata": {
+    "description": "A 40-point evidence-based website pre-launch audit.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "siteflight",
+      "description": "Audit a website before launch and return evidence for all 40 checks.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/siteflight"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "SiteFlight"
+  short_description: "Run a 40-point website preflight audit"
+  default_prompt: "Use $siteflight to audit this website before launch and return evidence for all 40 checks."

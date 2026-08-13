@@ -1,0 +1,40 @@
+{
+  "name": "siteflight",
+  "version": "1.0.0",
+  "description": "Run a 40-point evidence-based website pre-launch audit.",
+  "author": {
+    "name": "Yash Serai",
+    "url": "https://github.com/YashSerai"
+  },
+  "homepage": "https://github.com/YashSerai/siteflight",
+  "repository": "https://github.com/YashSerai/siteflight",
+  "license": "MIT",
+  "keywords": [
+    "website",
+    "prelaunch",
+    "audit",
+    "seo",
+    "local-business",
+    "conversion",
+    "accessibility",
+    "codex",
+    "claude-code",
+    "agent-skills"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "SiteFlight",
+    "shortDescription": "Forty checks before your website leaves the ground",
+    "longDescription": "SiteFlight checks SEO, conversion, trust, accessibility, legal basics, local-business signals, analytics, and launch behavior using source, rendered, production, and account evidence.",
+    "developerName": "Yash Serai",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read"
+    ],
+    "websiteURL": "https://github.com/YashSerai/siteflight",
+    "defaultPrompt": [
+      "Audit this website before launch and show me the blockers first."
+    ],
+    "brandColor": "#E85D3F"
+  }
+}
