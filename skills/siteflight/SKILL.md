@@ -1,6 +1,6 @@
 ---
 name: siteflight
-description: Run an evidence-based 40-point pre-launch audit for websites and local-business sites. Use whenever a user asks whether a site is ready to launch, requests a website preflight or launch checklist, wants SEO/conversion/trust/legal basics checked, or asks to review a site before publishing. Inspect source and the rendered site, test what can be tested, recommend exact fixes, and never call the site ready when required evidence is missing.
+description: Run an evidence-based 40-point website pre-launch audit for the important work AI coding agents often leave unfinished unless instructed. Use for site launch checklists, launch-readiness reviews, SEO and indexing audits, local-business sites, Google Search Console, sitemap.xml, robots.txt, llms.txt, forms, conversion paths, trust content, analytics, legal pages, or any request to decide whether a website is ready to publish. Inspect source, rendered pages, production, and connected accounts when available; recommend exact fixes and never call the site ready when required evidence is missing.
 ---
 
 # SiteFlight

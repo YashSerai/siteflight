@@ -4,13 +4,13 @@
     "name": "Yash Serai"
   },
   "metadata": {
-    "description": "A 40-point evidence-based website pre-launch audit.",
-    "version": "1.0.0"
+    "description": "A 40-point website pre-launch audit for the important work AI coding agents often leave unfinished.",
+    "version": "1.0.1"
   },
   "plugins": [
     {
       "name": "siteflight",
-      "description": "Audit a website before launch and return evidence for all 40 checks.",
+      "description": "Audit 40 overlooked pre-launch checks across discoverability, content, conversion, trust, local-business information, analytics, and site operations.",
       "source": "./",
       "strict": false,
       "skills": [

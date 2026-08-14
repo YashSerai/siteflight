@@ -1,30 +1,48 @@
+<div align="center">
+
 # SiteFlight
 
-### Forty checks before your website leaves the ground.
+### The 40-point website pre-launch checklist AI coding agents often leave unfinished.
 
-SiteFlight is an Agent Skill for the awkward moment before launch, when the site looks finished but nobody has checked whether the inquiry form explains its errors, the mobile phone number actually calls, the 404 returns a real 404, or analytics is collecting anything.
+[![GitHub stars](https://img.shields.io/github/stars/YashSerai/siteflight?style=flat-square&color=111111)](https://github.com/YashSerai/siteflight/stargazers)
+[![40 checks](https://img.shields.io/badge/pre--launch_checks-40-E85D3F?style=flat-square)](skills/siteflight/references/checklist.md)
+[![Agent Skills](https://img.shields.io/badge/Agent_Skills-compatible-2D7D46?style=flat-square)](https://agentskills.io)
+[![License: MIT](https://img.shields.io/github/license/YashSerai/siteflight?style=flat-square&color=E85D3F)](LICENSE)
+[![Claude Code](https://img.shields.io/badge/Claude_Code-compatible-D97757?style=flat-square)](https://github.com/anthropics/skills)
+[![OpenAI Codex](https://img.shields.io/badge/OpenAI_Codex-compatible-111111?style=flat-square)](https://github.com/openai/plugins)
 
-It gives Codex, Claude Code, and other compatible coding agents one job: inspect all 40 launch checks, show the evidence, and refuse to hand out a fake green light.
+Forty checks before your website leaves the ground.
 
-[![skills.sh](https://skills.sh/b/YashSerai/siteflight)](https://skills.sh/YashSerai/siteflight)
+</div>
+
+AI coding agents are good at getting a website to build. That is not the same as finishing the launch.
+
+If you are asking what to check before launching a website, SiteFlight is the checklist. It turns one broad request into a 40-point pre-launch website audit with evidence for every answer.
+
+SiteFlight checks the practical details that often disappear between design, development, SEO, content, and operations. Things like `sitemap.xml`, `robots.txt`, `llms.txt`, Search Console, form errors, opening hours, a real 404, a thank-you page, service pages, customer reviews, payment information, cookie consent, mobile calls to action, and a photo of the actual team.
+
+API key and dependency scans are important. They cover security. SiteFlight covers the rest of the website pre-launch work that Claude Code, Codex, and other agents can handle when the instructions are explicit.
+
+I built it because these checks are individually obvious once someone points them out, but they rarely live in one launch prompt. SiteFlight puts all 40 in one evidence-based audit.
+
+It checks the repository, the rendered website, production, and connected accounts when access exists. Every finding needs evidence. Missing access stays blocked instead of quietly turning green.
 
 ## Install
-
-The quickest route works with Codex, Claude Code, Cursor, and other Agent Skills-compatible tools:
 
 ```bash
 npx skills add YashSerai/siteflight --skill siteflight
 ```
 
-Install globally for specific agents:
+Install it globally for Codex and Claude Code:
 
 ```bash
 npx skills add YashSerai/siteflight --skill siteflight -g -a codex -a claude-code
 ```
 
-### Codex
+<details>
+<summary>Codex installation</summary>
 
-Ask Codex to install the skill from its GitHub directory:
+Ask Codex:
 
 ```text
 $skill-installer install https://github.com/YashSerai/siteflight/tree/main/skills/siteflight
@@ -32,59 +50,92 @@ $skill-installer install https://github.com/YashSerai/siteflight/tree/main/skill
 
 Restart Codex after installation.
 
-### Claude Code
+</details>
 
-Install it as a Claude Code plugin:
+<details>
+<summary>Claude Code installation</summary>
 
 ```text
 /plugin marketplace add YashSerai/siteflight
 /plugin install siteflight@siteflight
 ```
 
+</details>
+
+## The overlooked launch layer
+
+### Discovery, indexing, and technical SEO
+
+- `sitemap.xml`, `robots.txt`, canonicals, unique titles, meta descriptions, internal links, and real 404 responses
+- accidental production `noindex` or crawler blocks
+- Google Search Console property verification, sitemap submission, and indexing evidence when account access is available
+
+### Business information and local search
+
+- structured data and rich-result eligibility
+- separate service pages, useful FAQs, case studies, internal linking, and original blog coverage
+- local-business schema, opening hours, phone number, map directions, service area, and attributable reviews
+
+### AI-readable site information
+
+- a useful and accurate `llms.txt`
+- clear entity, service, author, and business information in visible HTML and structured data
+- content that can be parsed and cited without hiding the useful answer behind vague marketing copy
+
+`llms.txt` is not treated as a ranking switch. SiteFlight checks it as one machine-facing artifact alongside the sitemap, robots rules, structured data, and accessible HTML.
+
+### Conversion and customer trust
+
+- tap-to-call, visible email, working social profiles, clear calls to action, and a mobile sticky action when appropriate
+- specific form errors, safe success behavior, a thank-you state, and an honest response-time promise
+- real team photography, an About story, before-and-after work, customer reviews, case studies, guarantees, and payment information when those claims apply
+
+### Content, operations, and compliance
+
+- compressed and responsive images, alt text, favicon, social share images, breadcrumbs, and a custom 404
+- privacy policy, terms, cookie consent behavior, and Google Analytics event receipt when access exists
+- desktop and phone rendering, keyboard behavior, console errors, failed requests, clipping, and overflow
+
+The complete pass conditions live in [The SiteFlight 40](skills/siteflight/references/checklist.md).
+
 ## Use it
 
-Point your agent at a repository, preview, or live site:
+Audit a repository and preview before deployment:
 
 ```text
-Use SiteFlight to audit this website before launch. Check the source and rendered site, cover all 40 checks, and give me the blockers first.
+Use SiteFlight to audit this website before launch. Inspect the source and rendered preview, cover all 40 checks, and show me anything the site still needs before it is ready. Do not deploy.
 ```
 
-If you want fixes too, say so explicitly:
+Audit a live local-business website with external verification:
 
 ```text
-Run SiteFlight on this repo and local preview. Fix every P0 and P1 issue you can prove locally, then rerun the affected checks. Do not deploy.
+Run SiteFlight on https://example.com. Check all 40 pre-launch items across discoverability, content, conversion, trust, local-business information, forms, analytics, legal pages, mobile behavior, and connected accounts. Mark anything you cannot prove as blocked.
 ```
 
-## The SiteFlight 40
+Fix the verified defects:
 
-The checklist covers the parts that are easy to forget and expensive to discover after launch:
+```text
+Run SiteFlight on this repo and local preview. Fix every P0 and P1 issue you can verify locally, rerun the affected checks, and stop before deployment or third-party account changes.
+```
 
-- Search and machine readability: sitemap, rich results, canonicals, favicon, Search Console, `llms.txt`, `robots.txt`, titles, descriptions, and share cards.
-- Conversion: tap-to-call, useful form errors, above-the-fold calls to action, thank-you states, response promises, and mobile actions.
-- Content and trust: service pages, FAQs, case studies, reviews, team photography, opening hours, guarantees, payment methods, and real business contact details.
-- Navigation and accessibility: internal links, breadcrumbs, 404 behavior, alt text, maps, and working social profiles.
-- Operations and compliance: image delivery, cookie consent, privacy, terms, and analytics verification.
+## The report does not hide behind a score
 
-Read the [full 40-check specification](skills/siteflight/references/checklist.md) for the exact pass conditions.
-
-## What makes the report useful
-
-Every item ends in one of four states:
+Every one of the 40 checks ends in one state:
 
 | Status | Meaning |
 |---|---|
 | `PASS` | The agent observed enough evidence to support the claim. |
-| `FAIL` | The check was applicable and the observed site did not meet it. |
-| `BLOCKED` | The agent could not verify the account, production system, or behavior. |
+| `FAIL` | The check applies and the site does not meet it. |
+| `BLOCKED` | The required production, account, or behavioral evidence is unavailable. |
 | `NOT APPLICABLE` | The check genuinely does not fit this business, with a written reason. |
 
-SiteFlight keeps source, local preview, production, and account evidence separate. A tracking snippet in the repo is not proof that Google Analytics receives events. A branded error component is not proof that unknown URLs return HTTP 404. A passing build is not a launch verdict.
+The final verdict is `READY`, `NOT READY`, or `BLOCKED`.
 
-The final result is `READY`, `NOT READY`, or `BLOCKED`. There is no percentage score that can hide a broken inquiry path.
+A tracking snippet in source is not proof that Google Analytics receives events. A Search Console meta tag is not proof that the correct property is verified. A branded error component is not proof that unknown URLs return HTTP 404. A passing build is not a launch verdict.
 
-## Deterministic signal collector
+## Signal collector
 
-The skill includes a dependency-free crawler for collecting initial signals from a reachable site:
+SiteFlight includes a dependency-free crawler that gathers initial evidence from a reachable site:
 
 ```bash
 python skills/siteflight/scripts/siteflight.py \
@@ -92,15 +143,26 @@ python skills/siteflight/scripts/siteflight.py \
   --output siteflight-signals.json
 ```
 
-The crawler finds metadata, discoverability files, internal pages, structured data, image and contact signals, and obvious gaps. It does not pretend to verify visual placement, real customer identities, legal sufficiency, account ownership, form delivery, or analytics receipt. The agent must finish those checks in the rendered site and external systems.
+It collects signals for all 40 checks, including discoverability files, metadata, internal pages, structured data, images, contact methods, and obvious gaps.
 
-## Scope and safety
+The crawler cannot verify Search Console ownership, analytics receipt, real form delivery, legal sufficiency, review provenance, real team identity, or visual placement. The agent finishes those checks in the rendered website and external systems.
 
-SiteFlight never invents reviews, guarantees, opening hours, policies, payment methods, response times, or team details. It does not deploy, publish, create third-party properties, place calls, or contact a live business unless the user explicitly authorizes that action.
+## Why the skill is strict about evidence
 
-This skill is a launch-quality workflow, not legal advice. Privacy, cookie, terms, accessibility, and regulated-industry requirements still need review appropriate to the business and jurisdiction.
+Launch audits often collapse four different claims into one:
 
-## Repository layout
+- the code exists;
+- the feature rendered locally;
+- the preview worked;
+- production and the connected account received it.
+
+SiteFlight keeps those claims separate. It also refuses to invent reviews, guarantees, hours, policies, payment methods, response times, or team details to complete a checklist.
+
+The skill does not deploy, publish, create third-party properties, place calls, or contact a live business without explicit approval.
+
+SiteFlight is a launch-quality workflow, not legal advice. Privacy, cookie, terms, accessibility, and regulated-industry requirements still need review appropriate to the business and jurisdiction.
+
+## Repository
 
 ```text
 skills/siteflight/
@@ -111,6 +173,7 @@ skills/siteflight/
   scripts/siteflight.py
 .claude-plugin/marketplace.json
 .codex-plugin/plugin.json
+skill.json
 ```
 
 ## License

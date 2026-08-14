@@ -1,7 +1,7 @@
 {
   "name": "siteflight",
-  "version": "1.0.0",
-  "description": "Run a 40-point evidence-based website pre-launch audit.",
+  "version": "1.0.1",
+  "description": "Run 40 overlooked website pre-launch checks across discoverability, content, conversion, trust, analytics, and operations.",
   "author": {
     "name": "Yash Serai",
     "url": "https://github.com/YashSerai"
@@ -12,8 +12,22 @@
   "keywords": [
     "website",
     "prelaunch",
+    "website-launch-checklist",
+    "prelaunch-website-audit",
+    "site-audit",
+    "launch-readiness",
     "audit",
     "seo",
+    "technical-seo",
+    "local-seo",
+    "google-search-console",
+    "indexing",
+    "sitemap",
+    "robots-txt",
+    "llms-txt",
+    "structured-data",
+    "schema-markup",
+    "geo",
     "local-business",
     "conversion",
     "accessibility",
@@ -24,8 +38,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "SiteFlight",
-    "shortDescription": "Forty checks before your website leaves the ground",
-    "longDescription": "SiteFlight checks SEO, conversion, trust, accessibility, legal basics, local-business signals, analytics, and launch behavior using source, rendered, production, and account evidence.",
+    "shortDescription": "Forty overlooked checks before a website launches",
+    "longDescription": "SiteFlight audits 40 pre-launch checks that AI coding agents often leave unfinished, including technical SEO, Search Console, sitemap.xml, robots.txt, llms.txt, local-business details, content, conversion, trust, accessibility, analytics, legal pages, and launch behavior.",
     "developerName": "Yash Serai",
     "category": "Developer Tools",
     "capabilities": [
@@ -33,7 +47,7 @@
     ],
     "websiteURL": "https://github.com/YashSerai/siteflight",
     "defaultPrompt": [
-      "Audit this website before launch and show me the blockers first."
+      "Audit this website before launch. Cover all 40 SiteFlight checks and show me what is still missing or unproven."
     ],
     "brandColor": "#E85D3F"
   }
