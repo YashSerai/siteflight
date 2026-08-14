@@ -27,6 +27,14 @@ I built it because these checks are individually obvious once someone points the
 
 It checks the repository, the rendered website, production, and connected accounts when access exists. Every finding needs evidence. Missing access stays blocked instead of quietly turning green.
 
+## Origin and credit
+
+SiteFlight started after I saw [this website pre-launch video from @yatesvids](https://www.tiktok.com/@yatesvids/video/7672218589990112520?_r=1). The video shared many of the checklist ideas that became the starting point for the SiteFlight 40, and they lined up with problems I had already seen while building and launching websites.
+
+I turned that inspiration into an Agent Skill that can inspect a repository, rendered website, production environment, and connected accounts. SiteFlight adds the evidence model, pass conditions, signal collector, cross-agent packaging, and fix-and-retest workflow. The original video deserves clear credit for prompting the checklist.
+
+You can also find the creator at [@yatesvids on TikTok](https://www.tiktok.com/@yatesvids).
+
 ## Install
 
 ```bash
