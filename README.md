@@ -2,38 +2,28 @@
 
 # SiteFlight
 
-### The 40-point website pre-launch checklist AI coding agents often leave unfinished.
+### A 40-point website pre-launch checklist for Claude Code and Codex.
 
-[![GitHub stars](https://img.shields.io/github/stars/YashSerai/siteflight?style=flat-square&color=111111)](https://github.com/YashSerai/siteflight/stargazers)
-[![40 checks](https://img.shields.io/badge/pre--launch_checks-40-E85D3F?style=flat-square)](skills/siteflight/references/checklist.md)
-[![Agent Skills](https://img.shields.io/badge/Agent_Skills-compatible-2D7D46?style=flat-square)](https://agentskills.io)
-[![License: MIT](https://img.shields.io/github/license/YashSerai/siteflight?style=flat-square&color=E85D3F)](LICENSE)
-[![Claude Code](https://img.shields.io/badge/Claude_Code-compatible-D97757?style=flat-square)](https://github.com/anthropics/skills)
-[![OpenAI Codex](https://img.shields.io/badge/OpenAI_Codex-compatible-111111?style=flat-square)](https://github.com/openai/plugins)
+[![GitHub stars](https://img.shields.io/github/stars/YashSerai/siteflight?style=flat-square&logo=github&color=24292F)](https://github.com/YashSerai/siteflight/stargazers)
+[![License](https://img.shields.io/github/license/YashSerai/siteflight?style=flat-square&color=24292F)](LICENSE)
+[![Claude Code](https://img.shields.io/badge/Claude_Code-supported-24292F?style=flat-square)](https://github.com/anthropics/skills)
+[![Codex](https://img.shields.io/badge/Codex-supported-24292F?style=flat-square)](https://github.com/openai/plugins)
 
 Forty checks before your website leaves the ground.
 
+[The original checklist came from this TikTok by @yatesvids.](https://www.tiktok.com/@yatesvids/video/7672218589990112520?_r=1)
+
 </div>
 
-AI coding agents are good at getting a website to build. That is not the same as finishing the launch.
+The 40 checks came from @yatesvids' video. They lined up with a lot of what I had seen while building and launching websites, so I turned the checklist into a skill Claude Code and Codex can run before a site goes live.
 
-If you are asking what to check before launching a website, SiteFlight is the checklist. It turns one broad request into a 40-point pre-launch website audit with evidence for every answer.
+It tells the agent to check every item, show the evidence, and mark anything it cannot verify as blocked.
 
-SiteFlight checks the practical details that often disappear between design, development, SEO, content, and operations. Things like `sitemap.xml`, `robots.txt`, `llms.txt`, Search Console, form errors, opening hours, a real 404, a thank-you page, service pages, customer reviews, payment information, cookie consent, mobile calls to action, and a photo of the actual team.
+SiteFlight covers the details a normal build prompt often skips: `sitemap.xml`, `robots.txt`, `llms.txt`, Search Console, form errors, opening hours, a real 404, a thank-you page, service pages, customer reviews, payment information, cookie consent, mobile calls to action, and a photo of the actual team.
 
-API key and dependency scans are important. They cover security. SiteFlight covers the rest of the website pre-launch work that Claude Code, Codex, and other agents can handle when the instructions are explicit.
-
-I built it because these checks are individually obvious once someone points them out, but they rarely live in one launch prompt. SiteFlight puts all 40 in one evidence-based audit.
+This does not replace a security review. It covers the launch work outside that review.
 
 It checks the repository, the rendered website, production, and connected accounts when access exists. Every finding needs evidence. Missing access stays blocked instead of quietly turning green.
-
-## Origin and credit
-
-SiteFlight started after I saw [this website pre-launch video from @yatesvids](https://www.tiktok.com/@yatesvids/video/7672218589990112520?_r=1). The video shared many of the checklist ideas that became the starting point for the SiteFlight 40, and they lined up with problems I had already seen while building and launching websites.
-
-I turned that inspiration into an Agent Skill that can inspect a repository, rendered website, production environment, and connected accounts. SiteFlight adds the evidence model, pass conditions, signal collector, cross-agent packaging, and fix-and-retest workflow. The original video deserves clear credit for prompting the checklist.
-
-You can also find the creator at [@yatesvids on TikTok](https://www.tiktok.com/@yatesvids).
 
 ## Install
 
